@@ -47,9 +47,4 @@ This web-based quiz application provides a fun and intuitive way for users to te
 
 ---
 
-## 🗂️ Project Structure
-Quizzz_Demo
-├── index.html
-├── style.css
-├── script.js
-└── README.md
+
