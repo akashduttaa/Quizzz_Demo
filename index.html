@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Quiz Game</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-100 text-gray-900 transition-colors duration-300 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-red-600 text-white p-4 shadow-md rounded-b-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-3xl font-bold">Quiz Game</h1>
+
+      <!-- Theme Toggle -->
+      <div class="flex items-center">
+        <span class="text-white mr-2">Light</span>
+        <label for="themeToggle" class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="themeToggle" class="sr-only peer" />
+          <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+          <span class="ml-2 text-white">Dark</span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Quiz Area -->
+  <main class="flex-grow container mx-auto p-8 flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-2xl text-center transition-colors duration-300">
+
+      <h2 class="text-3xl font-bold text-indigo-700 mb-6">Test Your Knowledge!</h2>
+
+      <!-- Quiz Content -->
+      <div id="quizContainer" class="hidden">
+        <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">
+          Question <span id="questionNumber">1</span> of <span id="totalQuestions">5</span>
+        </p>
+
+        <p id="questionText" class="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-100"></p>
+
+        <div id="answerOptions" class="flex flex-col space-y-3 mb-6"></div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between mt-4">
+          <button id="prevButton" class="btn btn-secondary" disabled>
+            <i class="fas fa-arrow-left mr-2"></i> Previous
+          </button>
+          <button id="nextButton" class="btn btn-primary">
+            Next <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+          <button id="submitQuizButton" class="btn btn-success hidden">
+            Submit Quiz <i class="fas fa-check ml-2"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Results -->
+      <div id="resultsContainer" class="hidden">
+        <h3 class="text-3xl font-bold text-indigo-700 mb-4">Quiz Results</h3>
+        <p id="scoreDisplay" class="text-4xl font-extrabold text-gray-800 dark:text-gray-100 mb-6"></p>
+        <button id="restartQuizButton" class="btn btn-primary">
+          <i class="fas fa-redo mr-2"></i> Restart Quiz
+        </button>
+      </div>
+
+      <!-- Start Quiz Button -->
+      <button id="startQuizButton" class="btn btn-primary">
+        <i class="fas fa-play mr-2"></i> Start Quiz
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer bg-gray-800 text-white flex flex-col md:flex-row justify-between items-center p-6 mt-8 rounded-t-lg transition-colors duration-300">
+    <p>&copy; <span id="currentYear"></span> Designed & developed by <strong>Akash Dutta</strong>.</p>
+    <div class="socials flex space-x-4 mt-4 md:mt-0">
+      <a href="https://github.com/akashduttaa" target="_blank" class="text-white hover:text-indigo-400 transition-colors duration-300">
+        <i class="fab fa-github text-2xl"></i>
+      </a>
+      <a href="https://linkedin.com/in/akash-dutta-ad/" target="_blank" class="text-white hover:text-indigo-400 transition-colors duration-300">
+        <i class="fab fa-linkedin text-2xl"></i>
+      </a>
+      <a href="https://www.instagram.com/akashdutta___" target="_blank" class="text-white hover:text-indigo-400 transition-colors duration-300">
+        <i class="fab fa-instagram text-2xl"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
