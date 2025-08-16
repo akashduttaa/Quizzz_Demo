@@ -48,7 +48,7 @@ This web-based quiz application provides a fun and intuitive way for users to te
 ---
 
 ## 🗂️ Project Structure
-SCT_WD_3(ALTERNATIVE)/
+Quizzz_Demo
 ├── index.html
 ├── style.css
 ├── script.js
